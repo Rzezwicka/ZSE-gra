@@ -1,0 +1,60 @@
+body{
+    background-color: black;
+}
+
+
+
+#red { background-color: red; } 
+
+#blue { background-color: blue; } 
+
+#green { background-color: green; } 
+
+#yellow { background-color: yellow; } 
+
+
+#level-title{
+    text-align:center;
+    color:white;
+    font-size: 120px;
+    font-weight: bold;
+    text-shadow:
+        0 0 5px rgba(255, 255, 255, 0.6),
+        0 0 10px rgba(255, 255, 255, 0.5),
+        0 0 15px rgba(255, 255, 255, 0.4),
+        0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.zse-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px 10px;
+    margin: 0 auto;
+    width: 840px;
+    height: 840px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2); 
+}
+
+.zse-kwadrat {  
+    border-radius: 15px; 
+    cursor: pointer; 
+    box-shadow: 0 4px rgba(0, 0, 0, 0.2); 
+} 
+
+.zse-kwadrat:active { 
+    box-shadow: 0 2px rgba(0, 0, 0, 0.2); 
+    transform: scale(0.95); 
+} 
+
+ 
+
+.game-over { 
+    background-color: #ffcccc; 
+} 
+
+ 
+
+.hidden { 
+    display: none; 
+} 
