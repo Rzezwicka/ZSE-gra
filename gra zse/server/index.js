@@ -37,10 +37,10 @@ $(document).ready(function(){
         $(`#${color}`).addClass("pressed");
         setTimeout(() => {
             $(`#${color}`).removeClass("pressed");
-        }, 100);
+        }, 300);
     };
     
-    $(".zse-kwadrat").click(function(){
+    $(".zse-kwadrat").click(function() {
         if (!started) return;
         const userChosenColor = $(this).attr("id");
         userSequence.push(userChosenColor);
@@ -49,28 +49,27 @@ $(document).ready(function(){
         checkAnswer(userSequence.length - 1);
     });
     
-    function checkAnswer(currentLevel){
-        if (userSequence[currentLevel] === gameSequence[currentLevel]){
-            if (userSequence.length=== gameSequence.length){
+    function checkAnswer(currentLevel) {
+        if (userSequence[currentLevel] === gameSequence[currentLevel]) {
+            if (userSequence.length === gameSequence.length) {
                 setTimeout(() => {
                     nextSequence();
                 }, 1000);
             }
-        }
-        else{
-            //playSound("game-over")
-            $("body").addClass("game-over");
+        } else {
             $("h1").text("Przegrałeś... zacznij od nowa");
-
+            $("body").addClass("game-over");
+    
+            setTimeout(() => {
+                $("body").removeClass("game-over");
+            }, 200);
+    
             setTimeout(() => { 
-
-                $("body").removeClass("game-over"); 
-
-            }, 200); 
-
-            startOver();
+                startOver();
+            }, 2000); // Dodaj opóźnienie przed restartem
         }
-    };
+    }
+    
     
     function startOver(){
         started = false;
