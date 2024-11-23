@@ -1,5 +1,7 @@
 body{
     background-color: black;
+    text-align:center;
+    color:white;
 }
 
 
@@ -13,9 +15,7 @@ body{
 #yellow { background-color: yellow; } 
 
 
-#level-title{
-    text-align:center;
-    color:white;
+h1{ 
     font-size: 120px;
     font-weight: bold;
     text-shadow:
@@ -44,7 +44,7 @@ body{
 
 .zse-kwadrat:active { 
     box-shadow: 0 2px rgba(0, 0, 0, 0.2); 
-    transform: scale(0.95); 
+    transform: scale(0.95);
 } 
 
  
